@@ -8,6 +8,7 @@ const ROUTES: Record<string, string> = {
   gcr: "gcr.io",
   ghcr: "ghcr.io",
   k8s: "registry.k8s.io",
+  lscr: "lscr.io",
   nvcr: "nvcr.io",
   quay: "quay.io",
 };
@@ -82,6 +83,8 @@ app.all("/*", async (c: Context) => {
     },
     cacheTtl: 3600,
   };
+
+  console.log("params", params);
 
   // Forward the request to the target host.
   const response = await fetch(new Request(url.toString(), params));
