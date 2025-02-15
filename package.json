@@ -1,5 +1,5 @@
 {
-  "name": "mikan",
+  "name": "docker",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",

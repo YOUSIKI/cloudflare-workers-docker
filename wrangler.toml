@@ -1,13 +1,18 @@
-name = "mikan"
+name = "docker"
 main = "src/index.ts"
 compatibility_date = "2025-01-17"
 compatibility_flags = ["nodejs_compat"]
 
 workers_dev = true
-routes = [{ pattern = "mikan.siki.moe", custom_domain = true }]
-
-[vars]
-UPSTREAM = "mikanani.me"
+routes = [
+    { pattern = "docker.siki.moe", custom_domain = true },
+    { pattern = "gcr.siki.moe", custom_domain = true },
+    { pattern = "ghcr.siki.moe", custom_domain = true },
+    { pattern = "k8s.siki.moe", custom_domain = true },
+    { pattern = "lscr.siki.moe", custom_domain = true },
+    { pattern = "nvcr.siki.moe", custom_domain = true },
+    { pattern = "quay.siki.moe", custom_domain = true },
+]
 
 [placement]
 mode = "smart"
