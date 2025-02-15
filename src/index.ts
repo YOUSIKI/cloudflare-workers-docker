@@ -78,6 +78,7 @@ app.all("/*", async (c: Context) => {
       "Cache-Control": "max-age=0",
       Authorization: c.req.header("Authorization") ?? "",
       "X-Amz-Content-Sha256": c.req.header("X-Amz-Content-Sha256") ?? "",
+      "x-amz-date": c.req.header("x-amz-date") ?? "",
     },
     cacheTtl: 3600,
   };
